@@ -1,0 +1,4 @@
+1234;1234;luis;teran
+5678;5678;arturo;yanez
+9101;9101;augusto;teran
+2222;2222;valeria;zuloeta
