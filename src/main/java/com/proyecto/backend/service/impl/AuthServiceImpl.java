@@ -3,7 +3,6 @@ package com.proyecto.backend.service.impl;
 import com.proyecto.backend.dto.LoginRequestDTO;
 import com.proyecto.backend.service.AutentificacionService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.core.io.ClassPathResource;
 import org.springframework.core.io.Resource;
 
 import org.springframework.core.io.ResourceLoader;
@@ -24,12 +23,12 @@ public class AuthServiceImpl  implements AutentificacionService {
     @Override
     public String[] validarUsuario(LoginRequestDTO loginRequestDTO) throws IOException {
 
+
+
         String[] datosUsuario =null;
+        Resource resource = resourceLoader.getResource("classpath:integrantes.txt");
 
-        ClassPathResource resource = new ClassPathResource("integrantes.txt");
-        BufferedReader br = new BufferedReader(new InputStreamReader(resource.getInputStream()))
-
-        try(BufferedReader br = new BufferedReader(new FileReader(resource.getFile()))) {
+        try(BufferedReader br = new BufferedReader(new InputStreamReader(resource.getInputStream()))) {
             //Implement
 
             String linea;
