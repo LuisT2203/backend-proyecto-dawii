@@ -60,7 +60,7 @@ public class AuthServiceImpl  implements AutentificacionService {
         List<String[]> listaUsuarios = new ArrayList<>();
         String[] datosUsuario =null;
         Resource resource = resourceLoader.getResource("classpath:integrantes.txt");
-        try(BufferedReader br = new BufferedReader(new FileReader(resource.getFile()))) {
+        try(BufferedReader br = new BufferedReader(new InputStreamReader(resource.getInputStream()))) {
             //Implement
 
             String linea;
